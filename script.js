@@ -53,6 +53,15 @@ let b7validator = {
                             }
                         }
                     break;
+
+                    case 'senha':
+                        if(input.value != ''){
+                            let regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/;
+                            if(!regex.test(input.value)){
+                                return 'Senha digitada não é valida!';
+                            }
+                        }
+
                 }
 
             }
